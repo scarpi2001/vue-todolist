@@ -28,11 +28,12 @@ body {
 #add_text {
     width: calc(80% - 10px) ;
     margin-right: 10px;
-    
+    border: none;
 }
 
 #add_btn {
     width: 20%;
+    cursor: pointer;
 }
 
 /* errore task vuoto */
@@ -60,4 +61,8 @@ body {
     margin-bottom: 10px;
     border-bottom: 1px solid white;
     list-style: none;
+}
+
+.remove {
+    cursor: pointer;
 }

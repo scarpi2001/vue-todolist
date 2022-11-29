@@ -7,7 +7,7 @@ createApp({
         error: false,
         tasks: [
             { text: 'Fare i compiti', done: false }, 
-            { text: 'Fare la spesa', done: true }, 
+            { text: 'Fare la spesa', done: false }, 
             { text: 'Fare il bucato', done: false }
         ]
     }
@@ -29,7 +29,7 @@ createApp({
 
       this.tasks.splice(index, 1);
 
-    }
+    },
   }
 }).mount('#app')
 

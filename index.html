@@ -27,14 +27,20 @@
         
         <!-- task container -->
         <div id="task_container">
-            <ul>
+            <ul v-if="tasks.length > 0">
                 <li class="task" v-for="(task, index) in tasks">
-                    <span>{{task.text}}</span>
-                    <i class="fa-solid fa-xmark" @click="remove(index)"></i>
+                    <span>
+                        <input type="checkbox">
+                        {{task.text}}
+                    </span>
+                    <i class="fa-solid fa-xmark remove" @click="remove(index)"></i>
                 </li>
             </ul>
+
+            <h2 v-else>aggiungi qualche task...</h2>
         </div>
     </div>
+
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="js/main.js"></script>
