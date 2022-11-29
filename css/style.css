@@ -1,0 +1,38 @@
+/* GENERALI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* container */
+.container {
+    max-width: 600px;
+    margin: 200px auto;
+}
+
+/* aggiungi task */
+#add_text {
+    width: calc(80% - 10px) ;
+    margin-right: 10px;
+}
+
+#add_btn {
+    width: 20%;
+}
+
+/* errore task vuoto */
+#error {
+    color: red;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* lista di task generata */
+#task_container {
+    padding: 10px;
+}
+
+.task {
+    list-style: none;
+}

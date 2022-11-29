@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ToDo list - VueJs</title>
+</head>
+<body>
+    <!-- inizio app/container -->
+    <div id="app" class="container">
+        <!-- aggiungi task -->
+        <div id="inputs">
+            <input id="add_text" type="text" placeholder="aggiungi elementi alla lista" @KeyUp.enter="add" v-model="newTask">
+            <button id="add_btn" @click="add">Aggiungi</button>
+        </div>
+
+        <!-- errore task vuoto -->
+        <div id="error" v-if="error">non puoi inserire un task vuoto!</div>
+        
+        <!-- lista di task generata -->
+        <div id="task_container">
+            <ul>
+                <li class="task" v-for="(task,index) in tasks">
+                    {{task.text}}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
