@@ -11,15 +11,20 @@
     <!-- inizio app/container -->
     <div id="app" class="container">
         <!-- aggiungi task -->
-        <div id="inputs">
-            <input id="add_text" type="text" placeholder="aggiungi elementi alla lista" @KeyUp.enter="add" v-model="newTask">
-            <button id="add_btn" @click="add">Aggiungi</button>
+        <div>
+            <input id="add_text" class="inputs" type="text" placeholder="aggiungi elementi alla lista" 
+                @KeyUp.enter="add" 
+                v-model="newTask"
+            >
+            <button id="add_btn" class="inputs" @click="add">Aggiungi</button>
         </div>
 
         <!-- errore task vuoto -->
-        <div id="error" v-if="error">non puoi inserire un task vuoto!</div>
+        <div id="error" v-if="error">
+            <h3>non puoi inserire un task vuoto!</h3>
+        </div>
         
-        <!-- lista di task generata -->
+        <!-- task container -->
         <div id="task_container">
             <ul>
                 <li class="task" v-for="(task,index) in tasks">

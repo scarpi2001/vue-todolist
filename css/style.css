@@ -5,16 +5,30 @@
     box-sizing: border-box;
 }
 
+body {
+    font-size: 20px;
+}
+
 /* container */
 .container {
     max-width: 600px;
     margin: 200px auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
 }
 
 /* aggiungi task */
+.inputs {
+    padding: 15px 10px; 
+    border-radius: 10px;
+    font-size: 18px;
+}
+
 #add_text {
     width: calc(80% - 10px) ;
     margin-right: 10px;
+    
 }
 
 #add_btn {
@@ -23,16 +37,25 @@
 
 /* errore task vuoto */
 #error {
+    width: 50%;
+    margin: 20px auto;
     color: red;
-    margin: 20px 0;
+    padding: 5px;
     text-align: center;
+    border-radius: 5px;
+    background-color: white;
 }
 
-/* lista di task generata */
+/* task container */
 #task_container {
     padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
 }
 
 .task {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid white;
     list-style: none;
 }
