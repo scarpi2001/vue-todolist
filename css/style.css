@@ -54,6 +54,8 @@ body {
 }
 
 .task {
+    display: flex;
+    justify-content: space-between;
     padding: 5px;
     margin-bottom: 10px;
     border-bottom: 1px solid white;

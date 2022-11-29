@@ -15,15 +15,20 @@ createApp({
   methods: {
     add() {
 
-        if (this.newTask === "") {
-            this.error = true;
-        } else {
-            this.tasks.push({text: this.newTask, done: false});
-            this.error = false;
-        }
+      if (this.newTask === "") {
+          this.error = true;
+      } else {
+          this.tasks.push({text: this.newTask, done: false});
+          this.error = false;
+      }
 
-        this.newTask = "";
+      this.newTask = "";
         
+    },
+    remove(index) {
+
+      this.tasks.splice(index, 1);
+
     }
   }
 }).mount('#app')
